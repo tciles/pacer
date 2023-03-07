@@ -1,7 +1,7 @@
 $dark: #131726;
 $dark-1: #23293F;
 $dark-2: #272D45;
-$dark-3: #2D3551;
+$dark-3: #3e4a73;
 
 $blue: #34C2FF;
 $green: #4DFFA9;
@@ -12,6 +12,11 @@ $light: #C0C0C0;
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+}
+
+.container {
+  max-width: 1140px;
+  margin: 0 auto;
 }
 
 html, body, app, main {
@@ -43,6 +48,10 @@ html, body, app, main {
 
 .text-light {
   color: $light;
+}
+
+.text-dark {
+  color: #3E4A73FF;
 }
 
 .text-big {

@@ -166,9 +166,24 @@ const type = computed(() => {
       />
     </div>
   </main>
+
+  <nav class="d-flex container nav">
+    <a href="https://thomas-ciles.fr" class="text-dark">Thomas CILES</a>
+  </nav>
 </template>
 
 <style scoped>
+.nav {
+  height: 40px;
+  line-height: 40px;
+  align-items: center;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+}
+a {
+  text-decoration: none;
+}
 main {
   padding-top: 20px;
   padding-bottom: 40px;
