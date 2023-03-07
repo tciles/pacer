@@ -1,0 +1,172 @@
+$dark: #131726;
+$dark-1: #23293F;
+$dark-2: #272D45;
+$dark-3: #2D3551;
+
+$blue: #34C2FF;
+$green: #4DFFA9;
+$yellow: #FFF84D;
+$light: #C0C0C0;
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body, app, main {
+  margin: 0;
+  padding: 0;
+  background: $dark;
+
+  font-family: "Helvetica Neue", 'Roboto', sans-serif;
+  color: white;
+
+  --dark: #1B2136;
+  --dark-1: #23293F;
+  --dark-2: #272D45;
+  --dark-3: #2D3551;
+
+  --blue: #34C2FF;
+  --green: #4DFFA9;
+  --yellow: #FFF84D;
+  --light: $light;
+}
+
+.text-blue {
+  color: $blue;
+}
+
+.text-green {
+  color: $green;
+}
+
+.text-light {
+  color: $light;
+}
+
+.text-big {
+  font-size: 24px;
+}
+
+.text-small {
+  font-size: 12px;
+}
+
+.container {
+  max-width: 1140px;
+}
+
+.d-flex {
+  display: flex;
+}
+
+.flex-grow-1 {
+  flex-grow: 1;
+}
+
+.justify-content-center {
+  justify-content: center;
+}
+
+.align-items-center {
+  align-items: center;
+}
+
+input[type="text"] {
+  border: none;
+  background: $dark;
+  padding-right: 10px;
+  height: 40px;
+  outline: none;
+  padding-left: 10px;
+  text-align: right;
+  color: white;
+  font-size: 16px;
+}
+
+.input-unit {
+  background: $dark;
+  display: inline-block;
+  color: #adb5bd;
+  height: 40px;
+  line-height: 40px;
+  padding-right: 10px;
+  text-align: right;
+  border: none;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.icon {
+  fill: white;
+  height: 16px;
+
+  &-success {
+    fill: $green;
+  }
+
+  &-big {
+    height: 24px;
+  }
+}
+
+.form-group {
+  display: flex;
+  align-items: center;
+}
+
+
+.toggle {
+  --toggle-height: 18px;
+  --toggle-bar-color: #788898;
+  --toggle-active-color: #4DFFA9FF;
+  --toggle-handle-color: #ffffff;
+}
+
+.toggle > input[type="checkbox"] {
+  display: none;
+}
+
+.toggle__bar {
+  display: flex;
+  align-items: center;
+
+  height: 12px; /* default */
+  min-height: var(--toggle-height);
+  aspect-ratio: 1.75 / 1;
+  border-radius: 25% / 50%;
+
+  background-color: var(--toggle-bar-color);
+
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.toggle__handle {
+  display: block;
+
+  height: inherit;
+  min-height: var(--toggle-height);
+  aspect-ratio: 1 / 1;
+  border-radius: 50%;
+  transform: scale(0.8);
+
+  background-color: var(--toggle-handle-color);
+  box-shadow: 1px 1px 15px -2px rgba(0, 0, 0, 0.75);
+
+  transition: all 0.1s ease-in-out;
+}
+
+.toggle > input[type="checkbox"]:checked + .toggle__bar {
+  background-color: var(--toggle-active-color);
+}
+
+.toggle > input[type="checkbox"]:checked + .toggle__bar > .toggle__handle {
+  box-shadow: -1px 1px 15px -2px rgba(0, 0, 0, 0.75);
+
+  transform: translateX(74%) scale(0.8);
+}
